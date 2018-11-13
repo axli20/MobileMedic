@@ -17,8 +17,24 @@ export default class NoKitScreen extends React.Component {
   }
 
   render() {
+    const { navigate } = this.props.navigation;
+
     return(
-      <Text> No Kit Screen </Text>
+      <View>
+        <View>
+          <Text> {"IF YOU DON'T HAVE A TRAUMA FIRST AID KIT"} </Text>
+        </View>
+
+        <View>
+          <View>
+            <Text> Step 1 </Text>
+          </View>
+
+          <Text> Apply direct pressure on wound using clean cloth. </Text>
+        </View>
+
+        <Text> Photo of treatment here. </Text>
+      </View>
     )
   }
 }

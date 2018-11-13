@@ -17,8 +17,25 @@ export default class NoTourniquetScreen extends React.Component {
   }
 
   render() {
+    const { navigate } = this.props.navigation;
+
     return(
-      <Text> No T Screen </Text>
+      <View>
+        <View>
+          <Text> Step 1 </Text>
+        </View>
+
+        <Text>
+          Pack the wound with bleeding control (hemostatic) gauze,
+          any gauze, or clean cloth.
+        </Text>
+
+        <View>
+          <Text> Step 2 </Text>
+        </View>
+
+        <Text> Apply steady, direct pressure. </Text>
+      </View>
     )
   }
 }

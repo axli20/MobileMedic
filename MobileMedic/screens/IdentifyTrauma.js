@@ -17,8 +17,50 @@ export default class IdentifyTraumaScreen extends React.Component {
   }
 
   render() {
+    const { navigate } = this.props.navigation;
+
     return(
-      <Text> Id Trauma Screen </Text>
+      <View>
+        <View>
+          <Text> IDENTIFY TRAUMA </Text>
+        </View>
+
+        <TouchableHighlight
+          onPress={() => navigate("Bleeding")}>
+          <View>
+            <Text> BLEEDING </Text>
+          </View>
+        </TouchableHighlight>
+
+        <TouchableHighlight
+          onPress={() => navigate("IdentifyTrauma")}>
+          <View>
+            <Text> UNCONSCIOUSNESS </Text>
+          </View>
+        </TouchableHighlight>
+
+        <TouchableHighlight
+          onPress={() => navigate("IdentifyTrauma")}>
+          <View>
+            <Text> SEVERED LIMB </Text>
+          </View>
+        </TouchableHighlight>
+
+        <TouchableHighlight
+          onPress={() => navigate("IdentifyTrauma")}>
+          <View>
+            <Text> DAZED/CONFUSION </Text>
+          </View>
+        </TouchableHighlight>
+
+        <TouchableHighlight
+          onPress={() => navigate("IdentifyTrauma")}>
+          <View>
+            <Text> OTHER </Text>
+          </View>
+        </TouchableHighlight>
+
+      </View>
     )
   }
 }

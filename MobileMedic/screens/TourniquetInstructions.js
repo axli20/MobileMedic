@@ -17,8 +17,26 @@ export default class TournInstructionScreen extends React.Component {
   }
 
   render() {
+    const { navigate } = this.props.navigation;
+
     return(
-      <Text> T Instructions Screen </Text>
+      <View>
+        <View>
+          <View>
+            <Text> Step 1 </Text>
+          </View>
+
+          <Text> Apply tourniquet above the bleeding site. </Text>
+
+          <View>
+            <Text> Step 2 </Text>
+          </View>
+
+          <Text> Tighten until the bleeding stops. </Text>
+        </View>
+
+        <Text> Photo of tourniquet here. </Text>
+      </View>
     )
   }
 }

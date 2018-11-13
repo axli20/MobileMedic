@@ -17,8 +17,54 @@ export default class WoundScreen extends React.Component {
   }
 
   render() {
+    const { navigate } = this.props.navigation;
+
     return(
-      <Text> Wound Screen </Text>
+      <View>
+        <View>
+          <Text> WHERE IS THE WOUND? </Text>
+        </View>
+
+        <View>
+          <Text> Photo here </Text>
+          <View>
+            <TouchableHighlight
+              onPress={() => navigate("NoTourniquet")}>
+              <View>
+                <Text> NECK </Text>
+              </View>
+            </TouchableHighlight>
+
+            <TouchableHighlight
+              onPress={() => navigate("NoTourniquet")}>
+              <View>
+                <Text> SHOULDER </Text>
+              </View>
+            </TouchableHighlight>
+
+            <TouchableHighlight
+              onPress={() => navigate("Tourniquet")}>
+              <View>
+                <Text> ARM </Text>
+              </View>
+            </TouchableHighlight>
+
+            <TouchableHighlight
+              onPress={() => navigate("NoTourniquet")}>
+              <View>
+                <Text> GROIN </Text>
+              </View>
+            </TouchableHighlight>
+
+            <TouchableHighlight
+              onPress={() => navigate("Tourniquet")}>
+              <View>
+                <Text> LEG </Text>
+              </View>
+            </TouchableHighlight>
+          </View>
+        </View>
+      </View>
     )
   }
 }
