@@ -22,25 +22,29 @@ export default class TourniquetScreen extends React.Component {
     const { navigate } = this.props.navigation;
 
     return(
-      <View>
-        <View>
-          <Text style={Style.headerText}> IS A TOURNIQUET AVAILABLE? </Text>
-        </View>
+      <View style={Style.mainView}>
+        <View style={Style.questionBlock}>
+          <View style={Style.doubleLineView}>
+            <Text style={Style.headerText}> IS A TOURNIQUET AVAILABLE? </Text>
+          </View>
 
-        <View>
-          <TouchableHighlight
-            onPress={() => navigate("TourniquetInstructions")}>
-            <View style={Style.buttonShort}>
-              <Text style={Style.buttonText}> YES </Text>
-            </View>
-          </TouchableHighlight>
+          <View style={Style.yesNoBlock}>
+            <TouchableHighlight
+              style={Style.buttonShort}
+              onPress={() => navigate("TourniquetInstructions")}>
+              <View style={Style.buttonShort}>
+                <Text style={Style.buttonText}> YES </Text>
+              </View>
+            </TouchableHighlight>
 
-          <TouchableHighlight
-            onPress={() => navigate("NoTourniquet")}>
-            <View style={Style.buttonShort}>
-              <Text style={Style.buttonText}> NO </Text>
-            </View>
-          </TouchableHighlight>
+            <TouchableHighlight
+              style={Style.buttonShort}
+              onPress={() => navigate("NoTourniquet")}>
+              <View style={Style.buttonShort}>
+                <Text style={Style.buttonText}> NO </Text>
+              </View>
+            </TouchableHighlight>
+          </View>
         </View>
       </View>
     )

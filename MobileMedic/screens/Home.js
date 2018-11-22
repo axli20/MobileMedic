@@ -22,27 +22,43 @@ export default class HomeScreen extends React.Component {
     const { navigate } = this.props.navigation;
 
     return(
-      <View>
-        <View>
-          <Text style={Style.titleText}> MobileMedic </Text>
-          <Text style={Style.subHeaderText}> SAVE A LIFE </Text>
-          <Text style={Style.regText}> What everyone should know to stop bleeding after an injury. </Text>
-        </View>
+      <View style={Style.mainView}>
+        <View style={Style.homeBlockView}>
+          <View style={Style.centered}>
+            <Text style={Style.titleText}> MobileMedic </Text>
 
-        <View>
-          <Text style={Style.subHeaderText}> ENSURE YOUR SAFETY </Text>
-          <Text style={Style.regText}> Ensure the scene is safe. </Text>
-          <Text style={Style.regText}> If you are threatened at any time, remove yourself from danger
-                 and go to a safe location. </Text>
-          <Text style={Style.regText}> Wear gloves if available. </Text>
-        </View>
+            <View style={Style.singleLineView}>
+              <Text style={Style.subHeaderText}> SAVE A LIFE </Text>
+            </View>
 
-        <TouchableHighlight
-          onPress={() => navigate("IdentifyTrauma")}>
-          <View style={Style.buttonLong}>
-            <Text style={Style.buttonText}> CONTINUE, I AM SAFE </Text>
+            <View style={Style.regTextView}>
+              <Text style={Style.regText}> What everyone should know to stop bleeding after an injury. </Text>
+            </View>
           </View>
-        </TouchableHighlight>
+
+          <View style={Style.centered}>
+            <View style={Style.singleLineView}>
+              <Text style={Style.subHeaderText}> ENSURE YOUR SAFETY </Text>
+            </View>
+
+            <View style={Style.regTextView}>
+              <Text style={Style.regText}> Ensure the scene is safe. </Text>
+              <Text style={Style.regText}> If you are threatened at any time, remove yourself from danger
+                     and go to a safe location. {'\n'}</Text>
+              <Text style={Style.regText}> Wear gloves if available. </Text>
+            </View>
+          </View>
+
+          <View style={Style.centered}>
+            <TouchableHighlight
+              style={Style.buttonLong}
+              onPress={() => navigate("IdentifyTrauma")}>
+              <View style={Style.buttonLong}>
+                <Text style={Style.buttonText}> CONTINUE, I AM SAFE </Text>
+              </View>
+            </TouchableHighlight>
+          </View>
+        </View>
       </View>
     )
   }

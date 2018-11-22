@@ -22,46 +22,52 @@ export default class IdentifyTraumaScreen extends React.Component {
     const { navigate } = this.props.navigation;
 
     return(
-      <View>
-        <View>
+      <View style={Style.mainView}>
+        <View style={Style.singleLineView}>
           <Text style={Style.headerText}> IDENTIFY TRAUMA </Text>
         </View>
 
-        <TouchableHighlight
-          onPress={() => navigate("Bleeding")}>
-          <View style={Style.buttonLong}>
-            <Text style={Style.buttonText}> BLEEDING </Text>
-          </View>
-        </TouchableHighlight>
+        <View style={Style.buttonBlock}>
+          <TouchableHighlight
+            style={Style.buttonLong}
+            onPress={() => navigate("Bleeding")}>
+            <View style={Style.buttonLong}>
+              <Text style={Style.buttonText}> BLEEDING </Text>
+            </View>
+          </TouchableHighlight>
 
-        <TouchableHighlight
-          onPress={() => navigate("IdentifyTrauma")}>
-          <View style={Style.buttonLong}>
-            <Text style={Style.buttonText}> UNCONSCIOUSNESS </Text>
-          </View>
-        </TouchableHighlight>
+          <TouchableHighlight
+            style={Style.buttonLong}
+            onPress={() => navigate("IdentifyTrauma")}>
+            <View style={Style.buttonLong}>
+              <Text style={Style.buttonText}> UNCONSCIOUSNESS </Text>
+            </View>
+          </TouchableHighlight>
 
-        <TouchableHighlight
-          onPress={() => navigate("IdentifyTrauma")}>
-          <View style={Style.buttonLong}>
-            <Text style={Style.buttonText}> SEVERED LIMB </Text>
-          </View>
-        </TouchableHighlight>
+          <TouchableHighlight
+            style={Style.buttonLong}
+            onPress={() => navigate("IdentifyTrauma")}>
+            <View style={Style.buttonLong}>
+              <Text style={Style.buttonText}> SEVERED LIMB </Text>
+            </View>
+          </TouchableHighlight>
 
-        <TouchableHighlight
-          onPress={() => navigate("IdentifyTrauma")}>
-          <View style={Style.buttonLong}>
-            <Text style={Style.buttonText}> DAZED/CONFUSION </Text>
-          </View>
-        </TouchableHighlight>
+          <TouchableHighlight
+            style={Style.buttonLong}
+            onPress={() => navigate("IdentifyTrauma")}>
+            <View style={Style.buttonLong}>
+              <Text style={Style.buttonText}> DAZED/CONFUSION </Text>
+            </View>
+          </TouchableHighlight>
 
-        <TouchableHighlight
-          onPress={() => navigate("IdentifyTrauma")}>
-          <View style={Style.buttonLong}>
-            <Text style={Style.buttonText}> OTHER </Text>
-          </View>
-        </TouchableHighlight>
-
+          <TouchableHighlight
+            style={Style.buttonLong}
+            onPress={() => navigate("IdentifyTrauma")}>
+            <View style={Style.buttonLong}>
+              <Text style={Style.buttonText}> OTHER </Text>
+            </View>
+          </TouchableHighlight>
+        </View>
       </View>
     )
   }

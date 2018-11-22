@@ -23,26 +23,28 @@ export default class TournInstructionScreen extends React.Component {
     const { navigate } = this.props.navigation;
 
     return(
-      <View>
-        <View>
-          <View style={Style.stepBorder}>
-            <Text style={Style.stepText}> Step 1 </Text>
+      <View style={Style.mainView}>
+        <View style={Style.twoStepImageBlock}>
+          <View style={Style.twoStepBlock}>
+            <View style={Style.stepBorder}>
+              <Text style={Style.stepText}> Step 1 </Text>
+            </View>
+
+            <Text style={Style.regText}> Apply tourniquet above the bleeding site. </Text>
+
+            <View style={Style.stepBorder}>
+              <Text style={Style.stepText}> Step 2 </Text>
+            </View>
+
+            <Text style={Style.regText}> Tighten until the bleeding stops. </Text>
           </View>
 
-          <Text style={Style.regText}> Apply tourniquet above the bleeding site. </Text>
-
-          <View style={Style.stepBorder}>
-            <Text style={Style.stepText}> Step 2 </Text>
+          <View style={Style.imageViewSmall}>
+            <Image
+              source={require('../imgs/tourniquet.png')}
+              style={Style.image}
+            />
           </View>
-
-          <Text style={Style.regText}> Tighten until the bleeding stops. </Text>
-        </View>
-
-        <View style={Style.imageViewSmall}>
-          <Image
-            source={require('../imgs/tourniquet.png')}
-            style={Style.image}
-          />
         </View>
       </View>
     )

@@ -23,12 +23,12 @@ export default class WoundScreen extends React.Component {
     const { navigate } = this.props.navigation;
 
     return(
-      <View>
-        <View>
+      <View style={Style.mainView}>
+        <View style={Style.singleLineView}>
           <Text style={Style.headerText}> WHERE IS THE WOUND? </Text>
         </View>
 
-        <View>
+        <View style={Style.imageTextBlock}>
           <View style={Style.imageView}>
             <Image
               source={require('../imgs/body.png')}
@@ -36,8 +36,9 @@ export default class WoundScreen extends React.Component {
             />
           </View>
 
-          <View>
+          <View style={Style.buttonBlock}>
             <TouchableHighlight
+              style={Style.buttonShort}
               onPress={() => navigate("NoTourniquet")}>
               <View style={Style.buttonShort}>
                 <Text style={Style.buttonText}> NECK </Text>
@@ -45,6 +46,7 @@ export default class WoundScreen extends React.Component {
             </TouchableHighlight>
 
             <TouchableHighlight
+              style={Style.buttonShort}
               onPress={() => navigate("NoTourniquet")}>
               <View style={Style.buttonShort}>
                 <Text style={Style.buttonText}> SHOULDER </Text>
@@ -52,6 +54,7 @@ export default class WoundScreen extends React.Component {
             </TouchableHighlight>
 
             <TouchableHighlight
+              style={Style.buttonShort}
               onPress={() => navigate("Tourniquet")}>
               <View style={Style.buttonShort}>
                 <Text style={Style.buttonText}> ARM </Text>
@@ -59,6 +62,7 @@ export default class WoundScreen extends React.Component {
             </TouchableHighlight>
 
             <TouchableHighlight
+              style={Style.buttonShort}
               onPress={() => navigate("NoTourniquet")}>
               <View style={Style.buttonShort}>
                 <Text style={Style.buttonText}> GROIN </Text>
@@ -66,9 +70,10 @@ export default class WoundScreen extends React.Component {
             </TouchableHighlight>
 
             <TouchableHighlight
+              style={Style.buttonShort}
               onPress={() => navigate("Tourniquet")}>
               <View style={Style.buttonShort}>
-                <Text> LEG </Text>
+                <Text style={Style.buttonText}> LEG </Text>
               </View>
             </TouchableHighlight>
           </View>

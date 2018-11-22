@@ -22,21 +22,23 @@ export default class NoTourniquetScreen extends React.Component {
     const { navigate } = this.props.navigation;
 
     return(
-      <View>
-        <View style={Style.stepBorder}>
-          <Text style={Style.stepText}> Step 1 </Text>
+      <View style={Style.mainView}>
+        <View style={Style.twoStepBlock}>
+          <View style={Style.stepBorder}>
+            <Text style={Style.stepText}> Step 1 </Text>
+          </View>
+
+          <Text style={Style.regText}>
+            Pack the wound with bleeding control (hemostatic) gauze,
+            any gauze, or clean cloth.
+          </Text>
+
+          <View style={Style.stepBorder}>
+            <Text style={Style.stepText}> Step 2 </Text>
+          </View>
+
+          <Text style={Style.regText}> Apply steady, direct pressure. </Text>
         </View>
-
-        <Text style={Style.regText}>
-          Pack the wound with bleeding control (hemostatic) gauze,
-          any gauze, or clean cloth.
-        </Text>
-
-        <View style={Style.stepBorder}>
-          <Text style={Style.stepText}> Step 2 </Text>
-        </View>
-
-        <Text style={Style.regText}> Apply steady, direct pressure. </Text>
       </View>
     )
   }

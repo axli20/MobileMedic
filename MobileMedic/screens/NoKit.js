@@ -23,24 +23,26 @@ export default class NoKitScreen extends React.Component {
     const { navigate } = this.props.navigation;
 
     return(
-      <View>
-        <View>
+      <View style={Style.mainView}>
+        <View style={Style.doubleLineView}>
           <Text style={Style.headerText}> {"IF YOU DON'T HAVE A TRAUMA FIRST AID KIT"} </Text>
         </View>
 
-        <View>
-          <View style={Style.stepBorder}>
-            <Text style={Style.stepText}> Step 1 </Text>
+        <View style={Style.stepImageBlock}>
+          <View style={Style.oneStepBlock}>
+            <View style={Style.stepBorder}>
+              <Text style={Style.stepText}> Step 1 </Text>
+            </View>
+
+            <Text style={Style.regText}> Apply direct pressure on wound using clean cloth. </Text>
           </View>
 
-          <Text style={Style.regText}> Apply direct pressure on wound using clean cloth. </Text>
-        </View>
-
-        <View style={Style.imageViewSmall}>
-          <Image
-            source={require('../imgs/hand.png')}
-            style={Style.image}
-          />
+          <View style={Style.imageViewSmall}>
+            <Image
+              source={require('../imgs/hand.png')}
+              style={Style.image}
+            />
+          </View>
         </View>
       </View>
     )

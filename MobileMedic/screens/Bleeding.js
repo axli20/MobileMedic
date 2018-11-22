@@ -22,36 +22,39 @@ export default class BleedingScreen extends React.Component {
     const { navigate } = this.props.navigation;
 
     return(
-      <View>
-        <View>
+      <View style={Style.mainView}>
+        <View style={Style.singleLineView}>
           <Text style={Style.headerText}> BLEEDING </Text>
         </View>
 
-        <View>
+        <View style={Style.threeStepBlock}>
           <View style={Style.stepBorder}>
-            <Text style={Style.stepText}> Step 1 </Text>
+            <Text style={Style.stepText}> STEP 1 </Text>
           </View>
 
           <Text style={Style.regText}> Find source of bleeding. </Text>
 
           <View style={Style.stepBorder}>
-            <Text style={Style.stepText}> Step 2 </Text>
+            <Text style={Style.stepText}> STEP 2 </Text>
           </View>
 
           <Text style={Style.regText}> Open clothing so that wound is visible. </Text>
 
           <View style={Style.stepBorder}>
-            <Text style={Style.stepText}> Step 3 </Text>
+            <Text style={Style.stepText}> STEP 3 </Text>
           </View>
 
           <Text style={Style.regText}> Identify life-threatening bleeding. </Text>
         </View>
 
-        <View>
-          <Text style={Style.subHeaderText}> IS A TRAUMA FIRST AID KIT AVAILABLE? </Text>
+        <View style={Style.questionBlock}>
+          <View style={Style.doubleLineView}>
+            <Text style={Style.subHeaderText}> IS A TRAUMA FIRST AID KIT AVAILABLE? </Text>
+          </View>
 
-          <View>
+          <View style={Style.yesNoBlock}>
             <TouchableHighlight
+              style={Style.buttonShort}
               onPress={() => navigate("Wound")}>
               <View style={Style.buttonShort}>
                 <Text style={Style.buttonText}> YES </Text>
@@ -59,6 +62,7 @@ export default class BleedingScreen extends React.Component {
             </TouchableHighlight>
 
             <TouchableHighlight
+              style={Style.buttonShort}
               onPress={() => navigate("NoKit")}>
               <View style={Style.buttonShort}>
                 <Text style={Style.buttonText}> NO </Text>
