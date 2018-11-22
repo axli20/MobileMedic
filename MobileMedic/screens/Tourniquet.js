@@ -11,6 +11,8 @@ import {
   TouchableHighlight
 } from 'react-native';
 
+import Style from '../genStyle.js';
+
 export default class TourniquetScreen extends React.Component {
   constructor(props) {
     super(props)
@@ -22,21 +24,21 @@ export default class TourniquetScreen extends React.Component {
     return(
       <View>
         <View>
-          <Text> IS A TOURNIQUET AVAILABLE? </Text>
+          <Text style={Style.headerText}> IS A TOURNIQUET AVAILABLE? </Text>
         </View>
 
         <View>
           <TouchableHighlight
             onPress={() => navigate("TourniquetInstructions")}>
-            <View>
-              <Text> YES </Text>
+            <View style={Style.buttonShort}>
+              <Text style={Style.buttonText}> YES </Text>
             </View>
           </TouchableHighlight>
 
           <TouchableHighlight
             onPress={() => navigate("NoTourniquet")}>
-            <View>
-              <Text> NO </Text>
+            <View style={Style.buttonShort}>
+              <Text style={Style.buttonText}> NO </Text>
             </View>
           </TouchableHighlight>
         </View>

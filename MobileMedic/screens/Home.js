@@ -11,6 +11,8 @@ import {
   TouchableHighlight
 } from 'react-native';
 
+import Style from '../genStyle.js';
+
 export default class HomeScreen extends React.Component {
   constructor(props) {
     super(props)
@@ -22,23 +24,23 @@ export default class HomeScreen extends React.Component {
     return(
       <View>
         <View>
-          <Text> MobileMedic </Text>
-          <Text> SAVE A LIFE </Text>
-          <Text> What everyone should know to stop bleeding after an injury. </Text>
+          <Text style={Style.titleText}> MobileMedic </Text>
+          <Text style={Style.subHeaderText}> SAVE A LIFE </Text>
+          <Text style={Style.regText}> What everyone should know to stop bleeding after an injury. </Text>
         </View>
 
         <View>
-          <Text> ENSURE YOUR SAFETY </Text>
-          <Text> Ensure the scene is safe. </Text>
-          <Text> If you are threatened at any time, remove yourself from danger
+          <Text style={Style.subHeaderText}> ENSURE YOUR SAFETY </Text>
+          <Text style={Style.regText}> Ensure the scene is safe. </Text>
+          <Text style={Style.regText}> If you are threatened at any time, remove yourself from danger
                  and go to a safe location. </Text>
-          <Text> Wear gloves if available. </Text>
+          <Text style={Style.regText}> Wear gloves if available. </Text>
         </View>
 
         <TouchableHighlight
           onPress={() => navigate("IdentifyTrauma")}>
-          <View>
-            <Text> CONTINUE, I AM SAFE </Text>
+          <View style={Style.buttonLong}>
+            <Text style={Style.buttonText}> CONTINUE, I AM SAFE </Text>
           </View>
         </TouchableHighlight>
       </View>

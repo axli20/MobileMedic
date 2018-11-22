@@ -40,18 +40,21 @@ const App = StackNavigator({
   NoKit: {
     screen: NoKitScreen
   }
-},
-{
-  navigationOptions: {
-    headerStyle: {
-      position: 'absolute',
-      backgroundColor: 'transparent',
-      borderBottomWidth: 0,
-      elevation: 0,
-      zIndex: 100, top: 0, left: 0, right: 0
-    },
-  }
- }
+}
 )
+
+// header style block
+// ,
+// {
+//   navigationOptions: {
+//     headerStyle: {
+//       position: 'absolute',
+//       backgroundColor: 'transparent',
+//       borderBottomWidth: 0,
+//       elevation: 0,
+//       zIndex: 100, top: 0, left: 0, right: 0
+//     },
+//   }
+//  }
 
 export default App;

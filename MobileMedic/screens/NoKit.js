@@ -8,8 +8,11 @@ import {
   Text,
   View,
   Button,
-  TouchableHighlight
+  TouchableHighlight,
+  Image,
 } from 'react-native';
+
+import Style from '../genStyle.js';
 
 export default class NoKitScreen extends React.Component {
   constructor(props) {
@@ -22,18 +25,23 @@ export default class NoKitScreen extends React.Component {
     return(
       <View>
         <View>
-          <Text> {"IF YOU DON'T HAVE A TRAUMA FIRST AID KIT"} </Text>
+          <Text style={Style.headerText}> {"IF YOU DON'T HAVE A TRAUMA FIRST AID KIT"} </Text>
         </View>
 
         <View>
-          <View>
-            <Text> Step 1 </Text>
+          <View style={Style.stepBorder}>
+            <Text style={Style.stepText}> Step 1 </Text>
           </View>
 
-          <Text> Apply direct pressure on wound using clean cloth. </Text>
+          <Text style={Style.regText}> Apply direct pressure on wound using clean cloth. </Text>
         </View>
 
-        <Text> Photo of treatment here. </Text>
+        <View style={Style.imageViewSmall}>
+          <Image
+            source={require('../imgs/hand.png')}
+            style={Style.image}
+          />
+        </View>
       </View>
     )
   }

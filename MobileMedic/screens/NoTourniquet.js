@@ -11,6 +11,8 @@ import {
   TouchableHighlight
 } from 'react-native';
 
+import Style from '../genStyle.js';
+
 export default class NoTourniquetScreen extends React.Component {
   constructor(props) {
     super(props)
@@ -21,20 +23,20 @@ export default class NoTourniquetScreen extends React.Component {
 
     return(
       <View>
-        <View>
-          <Text> Step 1 </Text>
+        <View style={Style.stepBorder}>
+          <Text style={Style.stepText}> Step 1 </Text>
         </View>
 
-        <Text>
+        <Text style={Style.regText}>
           Pack the wound with bleeding control (hemostatic) gauze,
           any gauze, or clean cloth.
         </Text>
 
-        <View>
-          <Text> Step 2 </Text>
+        <View style={Style.stepBorder}>
+          <Text style={Style.stepText}> Step 2 </Text>
         </View>
 
-        <Text> Apply steady, direct pressure. </Text>
+        <Text style={Style.regText}> Apply steady, direct pressure. </Text>
       </View>
     )
   }

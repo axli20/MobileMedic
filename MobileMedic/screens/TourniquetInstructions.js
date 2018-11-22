@@ -8,8 +8,11 @@ import {
   Text,
   View,
   Button,
-  TouchableHighlight
+  TouchableHighlight,
+  Image,
 } from 'react-native';
+
+import Style from '../genStyle.js';
 
 export default class TournInstructionScreen extends React.Component {
   constructor(props) {
@@ -22,20 +25,25 @@ export default class TournInstructionScreen extends React.Component {
     return(
       <View>
         <View>
-          <View>
-            <Text> Step 1 </Text>
+          <View style={Style.stepBorder}>
+            <Text style={Style.stepText}> Step 1 </Text>
           </View>
 
-          <Text> Apply tourniquet above the bleeding site. </Text>
+          <Text style={Style.regText}> Apply tourniquet above the bleeding site. </Text>
 
-          <View>
-            <Text> Step 2 </Text>
+          <View style={Style.stepBorder}>
+            <Text style={Style.stepText}> Step 2 </Text>
           </View>
 
-          <Text> Tighten until the bleeding stops. </Text>
+          <Text style={Style.regText}> Tighten until the bleeding stops. </Text>
         </View>
 
-        <Text> Photo of tourniquet here. </Text>
+        <View style={Style.imageViewSmall}>
+          <Image
+            source={require('../imgs/tourniquet.png')}
+            style={Style.image}
+          />
+        </View>
       </View>
     )
   }

@@ -8,8 +8,11 @@ import {
   Text,
   View,
   Button,
-  TouchableHighlight
+  TouchableHighlight,
+  Image,
 } from 'react-native';
+
+import Style from '../genStyle.js';
 
 export default class WoundScreen extends React.Component {
   constructor(props) {
@@ -22,43 +25,49 @@ export default class WoundScreen extends React.Component {
     return(
       <View>
         <View>
-          <Text> WHERE IS THE WOUND? </Text>
+          <Text style={Style.headerText}> WHERE IS THE WOUND? </Text>
         </View>
 
         <View>
-          <Text> Photo here </Text>
+          <View style={Style.imageView}>
+            <Image
+              source={require('../imgs/body.png')}
+              style={Style.image}
+            />
+          </View>
+
           <View>
             <TouchableHighlight
               onPress={() => navigate("NoTourniquet")}>
-              <View>
-                <Text> NECK </Text>
+              <View style={Style.buttonShort}>
+                <Text style={Style.buttonText}> NECK </Text>
               </View>
             </TouchableHighlight>
 
             <TouchableHighlight
               onPress={() => navigate("NoTourniquet")}>
-              <View>
-                <Text> SHOULDER </Text>
+              <View style={Style.buttonShort}>
+                <Text style={Style.buttonText}> SHOULDER </Text>
               </View>
             </TouchableHighlight>
 
             <TouchableHighlight
               onPress={() => navigate("Tourniquet")}>
-              <View>
-                <Text> ARM </Text>
+              <View style={Style.buttonShort}>
+                <Text style={Style.buttonText}> ARM </Text>
               </View>
             </TouchableHighlight>
 
             <TouchableHighlight
               onPress={() => navigate("NoTourniquet")}>
-              <View>
-                <Text> GROIN </Text>
+              <View style={Style.buttonShort}>
+                <Text style={Style.buttonText}> GROIN </Text>
               </View>
             </TouchableHighlight>
 
             <TouchableHighlight
               onPress={() => navigate("Tourniquet")}>
-              <View>
+              <View style={Style.buttonShort}>
                 <Text> LEG </Text>
               </View>
             </TouchableHighlight>

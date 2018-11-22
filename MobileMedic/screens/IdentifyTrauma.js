@@ -11,6 +11,8 @@ import {
   TouchableHighlight
 } from 'react-native';
 
+import Style from '../genStyle.js';
+
 export default class IdentifyTraumaScreen extends React.Component {
   constructor(props) {
     super(props)
@@ -22,41 +24,41 @@ export default class IdentifyTraumaScreen extends React.Component {
     return(
       <View>
         <View>
-          <Text> IDENTIFY TRAUMA </Text>
+          <Text style={Style.headerText}> IDENTIFY TRAUMA </Text>
         </View>
 
         <TouchableHighlight
           onPress={() => navigate("Bleeding")}>
-          <View>
-            <Text> BLEEDING </Text>
+          <View style={Style.buttonLong}>
+            <Text style={Style.buttonText}> BLEEDING </Text>
           </View>
         </TouchableHighlight>
 
         <TouchableHighlight
           onPress={() => navigate("IdentifyTrauma")}>
-          <View>
-            <Text> UNCONSCIOUSNESS </Text>
+          <View style={Style.buttonLong}>
+            <Text style={Style.buttonText}> UNCONSCIOUSNESS </Text>
           </View>
         </TouchableHighlight>
 
         <TouchableHighlight
           onPress={() => navigate("IdentifyTrauma")}>
-          <View>
-            <Text> SEVERED LIMB </Text>
+          <View style={Style.buttonLong}>
+            <Text style={Style.buttonText}> SEVERED LIMB </Text>
           </View>
         </TouchableHighlight>
 
         <TouchableHighlight
           onPress={() => navigate("IdentifyTrauma")}>
-          <View>
-            <Text> DAZED/CONFUSION </Text>
+          <View style={Style.buttonLong}>
+            <Text style={Style.buttonText}> DAZED/CONFUSION </Text>
           </View>
         </TouchableHighlight>
 
         <TouchableHighlight
           onPress={() => navigate("IdentifyTrauma")}>
-          <View>
-            <Text> OTHER </Text>
+          <View style={Style.buttonLong}>
+            <Text style={Style.buttonText}> OTHER </Text>
           </View>
         </TouchableHighlight>
 
