@@ -1,4 +1,5 @@
 _Author: Angela Li_
+
 _Stack: React Native_
 
 ## READ ME
@@ -7,10 +8,14 @@ _Stack: React Native_
 ##### How to Download (macOS)
 
 _**Required Software**_
-- Expo
-- Terminal
+- Node.js (online download)
+- Expo (run `npm install -g expo-cli`)
 
-Make sure to create an Expo account if you don't already have one. Expo will be the software that will simulate the app on macOS's iOS simulator.
+Download Node.js before installing Expo. Make sure to create an Expo account if you don't already have one. Expo will be the software that will simulate the app on macOS's iOS simulator.
+
+Install the software above, then follow the instructions below.
+
+Expo also has a mobile app for iOS, where app simulations can be run directly on your mobile phone.
 
 _**Running Instructions**_
 
